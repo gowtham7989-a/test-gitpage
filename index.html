@@ -3,36 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Gallery</title>
+    <title>ETL Pipeline Architecture Overview</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f4f4f9;
             text-align: center;
             padding: 2rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2a6f97;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
         }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
             margin-top: 2rem;
+            margin-bottom: 2.5rem;
         }
         .gallery img {
-            max-width: 400px;
+            width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .explanation {
+            text-align: left;
+            padding-top: 1rem;
+            border-top: 2px solid #e1e8ed;
+        }
+        .explanation h2 {
+            color: #2a6f97;
+            margin-top: 1.5rem;
+        }
+        .step {
+            margin-bottom: 1rem;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <h1>My Photo Gallery</h1>
-    <p>Hosted on GitHub Pages</p>
+    <div class="container">
+        <h1>ETL Pipeline Architecture Flow</h1>
+        <p class="subtitle">A visual breakdown of data integration and analytics.</p>
 
-    <div class="gallery">
-        <img src="assets/images/its-working-oyy433.jpg" alt="Glad! it worked">
+        <div class="gallery">
+            <img src="assets/images/its-working-oyy433.jpg" alt="A flow diagram of an ETL Pipeline Architecture">
+        </div>
+
+        <div class="explanation">
+            <p>This diagram represents a complete end-to-end Extract, Transform, Load (ETL) pipeline. It starts with data stored on-premises and moves it through a series of stages to make it available for business intelligence and reporting.</p>
+
+            <h2>Overview of the Pipeline:</h2>
+            <div class="step"><span class="step-title">Source:</span> On-Premises SQL Server.</div>
+            <div class="step"><span class="step-title">Ingestion & Staging:</span> ETL Orchestration and FTP Server.</div>
+            <div class="step"><span class="step-title">Transformation:</span> Staged in a Data Lake.</div>
+            <div class="step"><span class="step-title">Destination:</span> Parallel Data Warehouse (PDW) and Qlik BI platform.</div>
+            <div class="step"><span class="step-title">Consumption:</span> Reporting and Analysis.</div>
+
+            <h2>Detailed Step-by-Step Flow:</h2>
+            <p>The flow is organized into a clear sequence of operations as shown below, moving from data capture to insights generation.</p>
+        </div>
     </div>
 
 </body>
