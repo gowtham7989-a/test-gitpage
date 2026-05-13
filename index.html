@@ -3,85 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETL Pipeline Architecture Overview</title>
+    <title>Enterprise ETL Infrastructure Portfolio</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f4f4f9;
-            text-align: center;
-            padding: 2rem;
-            line-height: 1.6;
-            color: #333;
+        :root {
+            --primary: #0078d4;
+            --secondary: #24292e;
+            --accent: #4caf50;
+            --legacy: #d97706;
+            --bg: #f4f7f9;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        h1 {
-            color: #2a6f97;
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-        .gallery {
-            margin-top: 2rem;
-            margin-bottom: 2.5rem;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .explanation {
-            text-align: left;
-            padding-top: 1rem;
-            border-top: 2px solid #e1e8ed;
-        }
-        .explanation h2 {
-            color: #2a6f97;
-            margin-top: 1.5rem;
-        }
-        .step {
-            margin-bottom: 1rem;
-        }
-        .step-title {
-            font-weight: bold;
-            color: #333;
-        }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); margin: 0; color: #333; }
+        header { background: var(--secondary); color: white; padding: 2rem; text-align: center; border-bottom: 4px solid var(--primary); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 3rem; overflow: hidden; }
+        .img-box { background: #fff; padding: 1rem; text-align: center; border-bottom: 1px solid #eee; }
+        .img-box img { max-width: 100%; height: auto; border-radius: 5px; }
+        .content { padding: 2rem; }
+        .label { font-weight: bold; color: var(--primary); text-transform: uppercase; font-size: 0.8rem; display: block; margin-bottom: 0.5rem; }
+        h2 { margin-top: 0; color: var(--secondary); }
+        .flow-desc { background: #f9fafb; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary); margin-top: 1rem; }
+        footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>ETL Pipeline Architecture Flow</h1>
-        <p class="subtitle">A visual breakdown of data integration and analytics.</p>
+<header>
+    <h1>Data Engineering & DevOps Portfolio</h1>
+    <p>Hybrid ETL Orchestration | Infrastructure as Code</p>
+</header>
 
-        <div class="gallery">
-            <img src="assets/images/its-working-oyy433.jpg" alt="A flow diagram of an ETL Pipeline Architecture">
+<div class="container">
+
+    <!-- MODERN CLOUD FLOW -->
+    <div class="card">
+        <div class="img-box">
+            <img src="assets/images/modern_cloud_flow.jpg" alt="Modern Cloud ETL Pipeline">
+            <p><strong>File Name:</strong> modern_cloud_flow.jpg</p>
         </div>
-
-        <div class="explanation">
-            <p>This diagram represents a complete end-to-end Extract, Transform, Load (ETL) pipeline. It starts with data stored on-premises and moves it through a series of stages to make it available for business intelligence and reporting.</p>
-
-            <h2>Overview of the Pipeline:</h2>
-            <div class="step"><span class="step-title">Source:</span> On-Premises SQL Server.</div>
-            <div class="step"><span class="step-title">Ingestion & Staging:</span> ETL Orchestration and FTP Server.</div>
-            <div class="step"><span class="step-title">Transformation:</span> Staged in a Data Lake.</div>
-            <div class="step"><span class="step-title">Destination:</span> Parallel Data Warehouse (PDW) and Qlik BI platform.</div>
-            <div class="step"><span class="step-title">Consumption:</span> Reporting and Analysis.</div>
-
-            <h2>Detailed Step-by-Step Flow:</h2>
-            <p>The flow is organized into a clear sequence of operations as shown below, moving from data capture to insights generation.</p>
+        <div class="content">
+            <span class="label">Cloud-Native Architecture</span>
+            <h2>Modern Pipeline: GLAPI & GKE Orchestration</h2>
+            <p>Data is extracted from SQL Server via <strong>GLAPI</strong> calls and staged in Cloud Storage (Blob/GCS). <strong>Prefect</strong>, hosted on <strong>GKE</strong>, manages transformations and pushes data to <strong>Snowflake/MongoDB</strong>. Secrets are secured via <strong>HashiCorp Vault</strong>.</p>
         </div>
     </div>
+
+    <!-- CONFIGURATION & CI/CD FLOW -->
+    <div class="card">
+        <div class="img-box">
+            <img src="assets/images/config_cicd_flow.jpg" alt="Ansible and Pester CI/CD Flow">
+            <p><strong>File Name:</strong> config_cicd_flow.jpg</p>
+        </div>
+        <div class="content">
+            <span class="label">DevOps & Automation</span>
+            <h2>Infrastructure Configuration: Ansible & Pester</h2>
+            <p><strong>Ansible</strong> playbooks automate SQL Server setup, while <strong>Pester</strong> validates the configuration state. The entire lifecycle is managed through a hybrid <strong>GitHub Actions</strong> and <strong>Azure DevOps (ADO)</strong> CI/CD pipeline.</p>
+        </div>
+    </div>
+
+    <!-- LEGACY ON-PREM FLOW -->
+    <div class="card">
+        <div class="img-box">
+            <img src="assets/images/legacy_onprem_flow.jpg" alt="Legacy On-Prem ETL Pipeline">
+            <p><strong>File Name:</strong> legacy_onprem_flow.jpg</p>
+        </div>
+        <div class="content">
+            <span class="label" style="color: var(--legacy);">Legacy Architecture</span>
+            <h2>Legacy Pipeline: FTP & Task Scheduler</h2>
+            <p>The traditional workflow moving data from SQL Server to <strong>FTP/NAS</strong> storage using <strong>Windows Task Scheduler</strong>, eventually feeding into <strong>Qlik Sense</strong> and <strong>PDW</strong> for business intelligence.</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Avilala Gowtham Krishna
+</footer>
 
 </body>
 </html>
