@@ -60,11 +60,27 @@
 </head>
 <body>
 
-    <h1>My Photo Gallery</h1>
-    <p>Hosted on GitHub Pages</p>
+    <div class="container">
+        <h1>ETL Pipeline Architecture Flow</h1>
+        <p class="subtitle">A visual breakdown of data integration and analytics.</p>
 
-    <div class="gallery">
-        <img src="assets/images/its-working-oyy433.jpg" alt="Glad! it worked">
+        <div class="gallery">
+            <img src="assets/images/its-working-oyy433.jpg" alt="A flow diagram of an ETL Pipeline Architecture">
+        </div>
+
+        <div class="explanation">
+            <p>This diagram represents a complete end-to-end Extract, Transform, Load (ETL) pipeline. It starts with data stored on-premises and moves it through a series of stages to make it available for business intelligence and reporting.</p>
+
+            <h2>Overview of the Pipeline:</h2>
+            <div class="step"><span class="step-title">Source:</span> On-Premises SQL Server.</div>
+            <div class="step"><span class="step-title">Ingestion & Staging:</span> ETL Orchestration and FTP Server.</div>
+            <div class="step"><span class="step-title">Transformation:</span> Staged in a Data Lake.</div>
+            <div class="step"><span class="step-title">Destination:</span> Parallel Data Warehouse (PDW) and Qlik BI platform.</div>
+            <div class="step"><span class="step-title">Consumption:</span> Reporting and Analysis.</div>
+
+            <h2>Detailed Step-by-Step Flow:</h2>
+            <p>The flow is organized into a clear sequence of operations as shown below, moving from data capture to insights generation.</p>
+        </div>
     </div>
 
 </body>
